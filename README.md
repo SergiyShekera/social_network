@@ -1,17 +1,29 @@
 All opportunities for authentication:
 
 http://localhost:8000/+
+
 auth/users/
+
 auth/users/me/
+
 auth/users/confirm/
+
 auth/users/change_username/
+
 auth/password/
+
 auth/password/reset/
+
 auth/password/reset/confirm/
+
 auth/token/login/ (Token Based Authentication)
+
 auth/token/logout/ (Token Based Authentication)
+
 auth/jwt/create/ (JSON Web Token Authentication)
+
 auth/jwt/refresh/ (JSON Web Token Authentication)
+
 auth/jwt/verify/ (JSON Web Token Authentication)
 
 
