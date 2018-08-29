@@ -9,6 +9,7 @@ class User_Serializer(serializers.ModelSerializer):
         model = User
         fields = ('id', 'username')
 
+
 class Post_Serializer(serializers.ModelSerializer):
 
     creater = User_Serializer()
@@ -16,7 +17,8 @@ class Post_Serializer(serializers.ModelSerializer):
     class Meta:
         creater = User_Serializer()
         model = Post
-        fields = ('id', 'creater', 'name', 'text')
+        fields = ('id', 'creater', 'name', 'text', 'date')
+
 
 
 class Post_Create_Serializer(serializers.ModelSerializer):

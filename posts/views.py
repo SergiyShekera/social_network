@@ -2,6 +2,7 @@ from .models import Post
 from rest_framework import permissions
 from .serializers import Post_Serializer
 from .serializers import Post_Create_Serializer
+from django.shortcuts import get_object_or_404
 
 
 from rest_framework.views import APIView
@@ -18,6 +19,15 @@ class Posts_lists(APIView):
         serializer = Post_Serializer(posts, many=True)
         return Response({'data': serializer.data})
 
+class Post_Detail_View(APIView):
+
+    def get(self, request, id):
+
+        p = Post.objects.all()
+        post = get_object_or_404(p, id=id)
+        serializer = Post_Serializer(post)
+        return Response(serializer.data)
+
 
 class Posts_Create(APIView):
 
@@ -33,4 +43,5 @@ class Posts_Create(APIView):
 
         else:
             return Response({'status': 'Error'})
+
 
