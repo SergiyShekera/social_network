@@ -20,7 +20,11 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('posts/', include('posts.urls'),
-    path('likes/', include('likes.urls'),
-    path('dislikes/', include('dislikes.urls'),
-]
+    path('posts/', include('posts.urls', namespace='posts')),
+    path('likes/', include('likes.urls')),
+    path('dislikes/', include('dislikes.urls')),
+
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
+    path('auth/', include('djoser.urls.jwt')),
+    ]
