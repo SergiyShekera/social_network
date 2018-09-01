@@ -15,10 +15,9 @@ class Post_Serializer(serializers.ModelSerializer):
     creater = User_Serializer()
 
     class Meta:
-        creater = User_Serializer()
-        model = Post
-        fields = ('id', 'creater', 'name', 'text', 'date')
 
+        model = Post
+        fields = ('id', 'creater', 'name', 'text', 'date', 'total_likes')
 
 
 class Post_Create_Serializer(serializers.ModelSerializer):
