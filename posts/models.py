@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.fields import GenericRelation
 from likes.models import Like
+from dislikes.models import Dislike
 
 class Post(models.Model):
 
@@ -12,6 +13,7 @@ class Post(models.Model):
     text = models.TextField(blank=True, verbose_name="Текст")
     date = models.DateTimeField("Дата создания", auto_now_add=True)
     likes = GenericRelation(Like)
+    dislikes = GenericRelation(Dislike)
 
 
     class Meta:
@@ -22,3 +24,7 @@ class Post(models.Model):
     @property
     def total_likes(self):
         return self.likes.count()
+
+    @property
+    def total_dislikes(self):
+        return self.dislikes.count()

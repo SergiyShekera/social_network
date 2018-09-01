@@ -7,6 +7,13 @@ http://localhost:8080/likes/unlike/<int:id> - post unlike(<int:id> - that is id 
 Example: http://localhost:8080/likes/like/1
 Example: http://localhost:8080/likes/unlike/1
 
+http://localhost:8080/dislikes/dislike/<int:id> - post dislike(<int:id> - that is id of post)
+http://localhost:8080/dislikes/undislike/<int:id> - post undislike(<int:id> - that is id of post)
+
+Example: http://localhost:8080/dislikes/dislike/1
+Example: http://localhost:8080/dislikes/undislike/1
+
+
 All opportunities for authentication:
 
 http://localhost:8000/+
