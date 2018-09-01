@@ -23,7 +23,7 @@ urlpatterns = [
     path('posts/', include('posts.urls', namespace='posts')),
     path('likes/', include('likes.urls')),
     path('dislikes/', include('dislikes.urls')),
-
+    path('user/', include('user.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
     path('auth/', include('djoser.urls.jwt')),

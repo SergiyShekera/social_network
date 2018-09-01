@@ -1,3 +1,6 @@
+http://localhost:8000/user/api/registration - registration User_Acc
+http://localhost:8080/user/api/user-list - list of all User_Acc
+
 All opportunities for authentication:
 
 http://localhost:8000/+
