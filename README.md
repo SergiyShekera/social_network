@@ -2,8 +2,10 @@ http://localhost:8000/user/api/registration - registration User_Acc
 http://localhost:8080/user/api/user-list - list of all User_Acc
 
 http://localhost:8080/likes/like/<int:id> - post like(<int:id> - that is id of post)
-
 http://localhost:8080/likes/unlike/<int:id> - post unlike(<int:id> - that is id of post)
+
+Example: http://localhost:8080/likes/like/1
+Example: http://localhost:8080/likes/unlike/1
 
 All opportunities for authentication:
 
