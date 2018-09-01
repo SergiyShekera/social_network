@@ -18,14 +18,14 @@ class User_Acc_Create(APIView):
 
         if User_data.is_valid():
 
-            username = request.data['username']
-            password = request.data['password']
+            username = User_data['username']
+            password = User_data['password']
             user = User.objects.create_user(username = username, password = password)
 
             User_Ac = User_Acc()
             User_Ac.user = user
-            User_Ac.first_name = request.data['first_name']
-            User_Ac.last_name = request.data['last_name']
+            User_Ac.first_name = User_data['first_name']
+            User_Ac.last_name = User_data['last_name']
             User_Ac.save()
 
             return Response({'status': 'Add'})
