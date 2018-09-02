@@ -1,4 +1,4 @@
-http://localhost:8080/user/api/registration - registration User_Acc
+http://localhost:8080/user/api/registration - registration User_Acc                                  
 http://localhost:8080/user/api/user-list - list of all User_Acc
 
 http://localhost:8080/likes/like/<int:id> - post like(<int:id> - that is id of post)              
@@ -18,30 +18,18 @@ All opportunities for authentication:
 
 http://localhost:8080/+
 
-auth/users/
-
-auth/users/me/
-
-auth/users/confirm/
-
-auth/users/change_username/
-
-auth/password/
-
-auth/password/reset/
-
-auth/password/reset/confirm/
-
-auth/token/login/ (Token Based Authentication)
-
-auth/token/logout/ (Token Based Authentication)
-
-auth/jwt/create/ (JSON Web Token Authentication)
-
-auth/jwt/refresh/ (JSON Web Token Authentication)
-
-auth/jwt/verify/ (JSON Web Token Authentication)
-
+auth/users/                                   
+auth/users/me/                                                                                     
+auth/users/confirm/                                 
+auth/users/change_username/                             
+auth/password/                                          
+auth/password/reset/                                  
+auth/password/reset/confirm/                                            
+auth/token/login/ (Token Based Authentication)                                          
+auth/token/logout/ (Token Based Authentication)                                               
+auth/jwt/create/ (JSON Web Token Authentication)                                              
+auth/jwt/refresh/ (JSON Web Token Authentication)                                                       
+auth/jwt/verify/ (JSON Web Token Authentication)                                                                          
 
 curl -X POST http://127.0.0.1:8080/auth/token/login/ --data 'username=username&password=password'
 {"auth_token": "b704c9fc3655635646356ac2950269f352ea1139"}
@@ -59,14 +47,11 @@ Automated bot:
 
 Object of this bot demonstrate functionalities of the system according to defined rules.This bot read rules from a config file.
 
-Bot read the configuration and create this activity:
-
-1)signup users (number provided in config)
-
-2)each user creates random number of posts with any content (up to max_posts_per_user)
-
-3)after creating the signup and posting activity, posts should be liked randomly.
+Bot read the configuration and create this activity:                                    
+1)signup users (number provided in config).                       
+2)each user creates random number of posts with any content (up to max_posts_per_user).                               
+3)after creating the signup and posting activity, posts should be liked randomly.                   
 
 
-![Image alt](https://github.com/SergiyShekera/social_network/blob/master/Screenshots/screenshot_1.png)
+![Image alt](https://github.com/SergiyShekera/social_network/blob/master/Automated_bot/screenshots/screenshot_1.png)
 
