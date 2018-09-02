@@ -3,9 +3,11 @@ from posts.models import Post
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
-
+from rest_framework import permissions
 
 class dislike(APIView):
+
+    permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request, id):
 
@@ -17,6 +19,8 @@ class dislike(APIView):
         return Response({'status': 'dislike added is successfully'})
 
 class undislike(APIView):
+
+    permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request, id):
 

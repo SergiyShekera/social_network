@@ -1,11 +1,14 @@
 from . import services
 from posts.models import Post
+from rest_framework import permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 
 
 class like(APIView):
+
+    permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request, id):
 
@@ -17,6 +20,8 @@ class like(APIView):
         return Response({'status': 'like added is successfully'})
 
 class unlike(APIView):
+
+    permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request, id):
 
