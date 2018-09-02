@@ -11,6 +11,8 @@ from rest_framework.response import Response
 
 class Posts_lists(APIView):
 
+    permission_classes = [permissions.AllowAny]
+
     def get(self, request):
 
         posts  = Post.objects.all()
@@ -19,6 +21,8 @@ class Posts_lists(APIView):
         return Response({'data': serializer.data})
 
 class Post_Detail_View(APIView):
+
+    permission_classes = [permissions.AllowAny]
 
     def get(self, request, id):
 
